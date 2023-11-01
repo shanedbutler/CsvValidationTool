@@ -8,19 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="sample.csv" />
-    <None Remove="sampleEmpty.csv" />
-    <None Remove="sampleNoEmail.csv" />
+    <None Remove="test.csv" />
+    <None Remove="testNoEmailColumn.csv" />
+    <None Remove="testNoEmails.csv" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="sample.csv">
+    <Content Include="test.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="sampleEmpty.csv">
+    <Content Include="testNoEmailColumn.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="sampleNoEmail.csv">
+    <Content Include="testNoEmails.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
