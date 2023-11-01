@@ -14,6 +14,7 @@ namespace CsvValidationTool
             var services = new ServiceCollection();
             services.AddTransient<IValidationParseService, ValidationParseService>();
             _serviceProvider = services.BuildServiceProvider();
+
             IValidationParseService validationParseService = _serviceProvider.GetService<IValidationParseService>();
 
             string filename = string.Empty;
