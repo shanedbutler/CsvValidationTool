@@ -20,7 +20,7 @@ namespace CsvValidationTool.Services
                 return results;
             }
 
-            int emailColumnIndex = 0;
+            int emailColumnIndex = -1;
 
             using (var reader = new StreamReader(filename))
             {
@@ -32,7 +32,7 @@ namespace CsvValidationTool.Services
                     string[] values = line?.Split(',');
                     if (values == null || values.Length == 0) continue;  // Skip lines without commas
 
-                    if (emailColumnIndex == 0)
+                    if (emailColumnIndex == -1)
                     {
                         emailColumnIndex = Array.IndexOf(values, "Email");
                         if (emailColumnIndex == -1)
@@ -43,7 +43,10 @@ namespace CsvValidationTool.Services
                     }
                     else
                     {
-                        results.Emails.Add(values[emailColumnIndex]);
+                        if (!string.IsNullOrEmpty(values[emailColumnIndex])) // Only add email value if not empty
+                        {
+                            results.Emails.Add(values[emailColumnIndex]);
+                        }
                     }
                 }
                 reader.Close();
@@ -61,7 +64,7 @@ namespace CsvValidationTool.Services
         /// Validates a list of emails
         /// </summary>
         /// <param name="emails"></param>
-        /// <returns></returns>
+        /// <returns>An object containing a list of valid emails and a list of invalid emails</returns>
         public EmailValidationResults ValidateEmails(List<string> emails)
         {
             EmailValidationResults results = new EmailValidationResults();
