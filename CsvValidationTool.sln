@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvValidationTool", "CsvValidationTool.csproj", "{6754F5A5-57C0-4559-8954-853DBDA9CFAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvValidationTool.App", "CsvValidationTool.App\CsvValidationTool.App.csproj", "{6754F5A5-57C0-4559-8954-853DBDA9CFAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvValidationTool.Tests", "CsvValidationTool.Tests\CsvValidationTool.Tests.csproj", "{50E83B53-3FFA-4D67-9A62-65599F6DB406}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6754F5A5-57C0-4559-8954-853DBDA9CFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6754F5A5-57C0-4559-8954-853DBDA9CFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6754F5A5-57C0-4559-8954-853DBDA9CFAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E83B53-3FFA-4D67-9A62-65599F6DB406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E83B53-3FFA-4D67-9A62-65599F6DB406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E83B53-3FFA-4D67-9A62-65599F6DB406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E83B53-3FFA-4D67-9A62-65599F6DB406}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

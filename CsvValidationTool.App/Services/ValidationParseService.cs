@@ -20,7 +20,7 @@ namespace CsvValidationTool.Services
                 return results;
             }
 
-            int emailColumnIndex = -1;
+            int emailColumnIndex = 0;
 
             using (var reader = new StreamReader(filename))
             {
@@ -32,7 +32,7 @@ namespace CsvValidationTool.Services
                     string[] values = line?.Split(',');
                     if (values == null || values.Length == 0) continue;  // Skip lines without commas
 
-                    if (emailColumnIndex == -1)
+                    if (emailColumnIndex == 0)
                     {
                         emailColumnIndex = Array.IndexOf(values, "Email");
                         if (emailColumnIndex == -1)
